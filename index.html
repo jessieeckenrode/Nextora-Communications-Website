@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nextora Communications - VoIP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f6f7fb; color: #0f1724; }
+    header, footer { background: #fff; border-bottom: 1px solid #e2e8f0; }
+    .card { border-radius: 14px; background: #fff; box-shadow: 0 6px 20px rgba(12,18,31,0.06); padding: 1.5rem; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-4px); }
+    .badge-pop { position: absolute; top: -10px; right: -10px; background: linear-gradient(90deg,#1a73e8,#5b8def); color: #fff; padding: 5px 10px; border-radius: 999px; font-weight: 600; font-size: 0.75rem; }
+    .toggle { display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .65rem;border-radius:999px;border:1px solid #e6eefb;cursor:pointer; }
+    .toggle.active { background: linear-gradient(90deg,#1a73e8,#5b8def); color: #fff; }
+    @media (prefers-reduced-motion:reduce) { * { transition:none!important; } }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="py-4 px-6">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#1a73e8"/></svg>
+        <h1 class="text-lg font-semibold">Nextora Communications</h1>
+      </div>
+      <nav class="hidden md:flex gap-6 text-gray-600">
+        <a href="#plans" class="hover:underline">Plans</a>
+        <a href="#calculator" class="hover:underline">Calculator</a>
+        <a href="#careers" class="hover:underline">Careers</a>
+        <a href="#about" class="hover:underline">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-[#1a73e8] to-[#5b8def] text-white rounded-xl mx-6 mt-6 p-8 text-center">
+    <h2 class="text-3xl font-bold">CUCM + CUC — Business-grade VoIP</h2>
+    <p class="mt-2 text-white/90">Feature-rich plans built around Cisco Unified Communications Manager (CUCM) and Cisco Unity Connection (CUC).</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-6xl mx-auto py-12 px-6">
+    <h3 class="text-2xl font-semibold mb-4">What is VoIP?</h3>
+    <p class="mb-4">Voice over IP (VoIP) allows calls over the internet instead of traditional phone lines, turning your voice into digital packets for fast, reliable communication.</p>
+    <h3 class="text-2xl font-semibold mb-4 mt-8">Why Use VoIP?</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card"> <h4 class="font-semibold mb-2">Lower Costs</h4> <p>VoIP reduces call costs and eliminates expensive hardware.</p> </div>
+      <div class="card"> <h4 class="font-semibold mb-2">Flexibility</h4> <p>Call from desk phones, computers, or mobile apps anywhere.</p> </div>
+      <div class="card"> <h4 class="font-semibold mb-2">Extra Features</h4> <p>Video calling, voicemail-to-email, and call forwarding included.</p> </div>
+      <div class="card"> <h4 class="font-semibold mb-2">Scalability</h4> <p>Easily expand your business communication system without new hardware.</p> </div>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section id="plans" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold mb-8">Our CUCM + CUC Powered Plans</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card relative">
+        <h4 class="text-lg font-bold">Essentials</h4>
+        <p class="text-sm text-gray-600 mt-2">CUCM basic user/device license + core voicemail (CUC)</p>
+        <div class="mt-4 text-2xl font-bold">$120<span class="text-base font-medium">/mo</span></div>
+        <p class="text-xs text-gray-500">+ $200 setup, $1/DID</p>
+        <ul class="mt-4 list-disc list-inside text-gray-700 text-sm">
+          <li>CUC visual voicemail</li>
+          <li>Single Number Reach</li>
+          <li>Softphone support (Jabber/Webex)</li>
+        </ul>
+      </div>
+      <div id="businessCard" class="card relative border-2 border-indigo-50">
+        <div class="badge-pop">Most Popular</div>
+        <h4 class="text-lg font-bold">Business</h4>
+        <p class="text-sm text-gray-600 mt-2">Advanced CUCM routing + CUC unified messaging, ideal for multi-site businesses</p>
+        <div class="mt-4 text-2xl font-bold">$180<span class="text-base font-medium">/mo</span></div>
+        <p class="text-xs text-gray-500">+ $200 setup, $1/DID</p>
+        <ul class="mt-4 list-disc list-inside text-gray-700 text-sm">
+          <li>Hunt & pickup groups, advanced routing (CUCM)</li>
+          <li>Voicemail-to-email (CUC)</li>
+          <li>Video calling & call recording</li>
+          <li>Remote access via Expressway</li>
+        </ul>
+      </div>
+      <div class="card relative">
+        <h4 class="text-lg font-bold">Enterprise</h4>
+        <p class="text-sm text-gray-600 mt-2">High-availability CUCM clusters, UCCX features, and dedicated support</p>
+        <div class="mt-4 text-2xl font-bold">$250<span class="text-base font-medium">/mo</span></div>
+        <p class="text-xs text-gray-500">+ $200 setup, $1/DID</p>
+        <ul class="mt-4 list-disc list-inside text-gray-700 text-sm">
+          <li>CUCM cluster redundancy (HA)</li>
+          <li>UCCX lite & advanced call center tools</li>
+          <li>SSO / AD integration & speech-enabled auto attendant</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator" class="max-w-6xl mx-auto px-6 py-12 card">
+    <h3 class="text-xl font-semibold mb-4">Price your business</h3>
+    <div class="grid md:grid-cols-3 gap-4">
+      <div><label class="block text-sm text-gray-700">Plan</label><select id="planSelect" class="mt-1 block w-full p-2 border rounded"><option value="120" data-key="essentials">Essentials — $120</option><option value="180" data-key="business" selected>Business — $180</option><option value="250" data-key="enterprise">Enterprise — $250</option></select></div>
+      <div><label class="block text-sm text-gray-700">Number of DIDs</label><input id="numDIDs" type="number" min="0" value="10" class="mt-1 block w-full p-2 border rounded"></div>
+      <div><label class="block text-sm text-gray-700">Number of Users</label><input id="numUsers" type="number" min="0" value="12" class="mt-1 block w-full p-2 border rounded"></div>
+    </div>
+    <div class="mt-4"><label class="block text-sm text-gray-700">Add-ons</label><div class="mt-2 flex gap-2 flex-wrap"><button data-addon="callRecording" class="toggle" aria-pressed="false">Call recording</button><button data-addon="uccx" class="toggle" aria-pressed="false">UCCX lite</button><button data-addon="prioritySupport" class="toggle" aria-pressed="false">Priority support</button></div></div>
+    <div class="mt-4 grid md:grid-cols-2 gap-4 items-center"><div><label class="text-sm text-gray-700">Estimated monthly</label><div id="monthlyTotal" class="mt-1 text-2xl font-bold">$0.00</div></div><div><label class="text-sm text-gray-700">One-time setup</label><div id="setupTotal" class="mt-1 text-lg font-medium">$200.00</div></div></div>
+    <div class="mt-4"><div id="breakdown" class="text-sm text-gray-700"></div></div>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-xl font-semibold mb-4">Careers</h3>
+    <p class="text-sm text-gray-600 mb-4">VoIP is at the heart of modern communications. Click More Info to visit our careers site.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card p-4"><h4 class="font-bold">VoIP Engineer</h4><p>Design and maintain VoIP systems.</p><a href="https://careers.nextoracommunications.net" target="_blank" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">More Info</a></div>
+      <div class="card p-4"><h4 class="font-bold">Network Administrator</h4><p>Ensure data and calls flow smoothly.</p><a href="https://careers.nextoracommunications.net" target="_blank" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">More Info</a></div>
+      <div class="card p-4"><h4 class="font-bold">Support Technician</h4><p>Help customers troubleshoot VoIP services.</p><a href="https://careers.nextoracommunications.net" target="_blank" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">More Info</a></div>
+      <div class="card p-4"><h4 class="font-bold">Cybersecurity Specialist</h4><p>Protect VoIP networks from hacking and fraud.</p><a href="https://careers.nextoracommunications.net" target="_blank" class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">More Info</a></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 px-6 text-center text-sm text-gray-600">&copy; 2025 Nextora Communications</footer>
+
+  <script>
+  (function(){
+    const planSelect = document.getElementById('planSelect');
+    const numDIDs = document.getElementById('numDIDs');
+    const numUsers = document.getElementById('numUsers');
+    const monthlyTotal = document.getElementById('monthlyTotal');
+    const setupTotal = document.getElementById('setupTotal');
+    const breakdown = document.getElementById('breakdown');
+    const addonButtons = Array.from(document.querySelectorAll('[data-addon]'));
+    const businessCard = document.getElementById('businessCard');
+    const addonPrices = {callRecording:25, uccx:80, prioritySupport:60};
+    const activeAddons = new Set();
+
+    function format(n){return '$'+Number(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});}
+
+    function calc(){
+      const base = Number(planSelect.value);
+      const didCount = Math.max(0, Number(numDIDs.value));
+      const users = Math.max(0, Number(numUsers.value));
+      let addons = 0; activeAddons.forEach(k=>addons+=addonPrices[k]||0);
+      const perUser=2; const monthly = base + didCount*1 + users*perUser + addons;
+      monthlyTotal.textContent = format(monthly); setupTotal.textContent = format(200);
+      breakdown.innerHTML = `<div>Base plan: <strong>${format(base)}</strong></div><div>DIDs (${didCount} × $1): <strong>${format(didCount*1)}</strong></div><div>Users (${users} × $${perUser}): <strong>${format(users*perUser)}</strong></div><div>Add-ons: <strong>${format(addons)}</strong></div><div class='mt-2'>Estimated monthly total: <strong>${format(monthly)}</strong></div>`;
+      const selectedKey = planSelect.options[planSelect.selectedIndex].dataset.key;
+      if(selectedKey==='business'){businessCard.style.transform='scale(1.03)';setTimeout(()=>businessCard.style.transform='scale(1)',300);}
+    }
+
+    [planSelect,numDIDs,numUsers].forEach(el=>el.addEventListener('input',()=>{calc();}));
+    addonButtons.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const key = btn.dataset.addon; const on = btn.getAttribute('aria-pressed')==='true';
+        btn.setAttribute('aria-pressed',String(!on));
+        btn.classList.toggle('active',!on);
+        if(!on) activeAddons.add(key); else activeAddons.delete(key);
+        calc();
+      });
+    });
+    calc();
+  })();
+  </script>
+</body>
+</html>
